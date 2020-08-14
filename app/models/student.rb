@@ -2,6 +2,8 @@ class Student < ActiveRecord::Base
     has_many :grade_levels    
     has_many :teachers, through: :grade_levels
     has_many :lockers
+    has_many :enrollments
+    has_many :subjects, through: :enrollments
     def full_name
         "#{first_name} #{last_name}"
     end
