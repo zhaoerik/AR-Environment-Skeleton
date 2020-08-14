@@ -1,8 +1,7 @@
 # AR-Environment-Skeleton
 
-You can use this repo to build new Activerecord projects
 
-* You will need to create your own app/models directories
+ PART 1
 
 Domain: Student-Teacher
 - A Student has a first_name (string)
@@ -19,4 +18,13 @@ Domain: Student-Teacher
 You should have a completed seeds file for testing
 Answer the following questions in the README:
 Which method(s) does Active Record create for you?
+    Student#first_name, Student#last_name, Student#grade_level, Student.all, Teacher#last_name, Teacher#grade_level, Teacher#years_of_experience
 Which method(s) did you have to create yourself? Why?
+    Student#full_name, self.all_in_grade(), Teacher#tenure
+    We did not set attributes to these.
+
+
+PART 2
+- A Student belongs to a Teacher
+- Student#teacher should return the teacher that student belongs to
+- Teacher#students should return a list of all the students that belong to this teacher
